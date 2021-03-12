@@ -15,6 +15,7 @@ steps:
   - run: echo "Pull Request ${number} (${sha})"
     env:
       number: ${{ steps.find-pull-request.outputs.number }}
+      title: ${{ steps.find-pull-request.outputs.title }}
       sha: ${{ steps.find-pull-request.outputs.head-sha }}
 ```
 
